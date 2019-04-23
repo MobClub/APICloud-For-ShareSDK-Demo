@@ -47,7 +47,7 @@
     <script>
         // 授权
         function authBtnClickHandler() {
-            var shareApi = api.require('ShareSDKPlus');
+            var shareApi = api.require('shareSDKPlus');
             shareApi.authorize({
                 "platform": $sharesdk.PlatformID.SinaWeibo
             },function(ret, err){
@@ -80,7 +80,7 @@
 
         // 取消授权
         function cancelAuthBtnClickHandler() {
-            var shareApi = api.require('ShareSDKPlus');
+            var shareApi = api.require('shareSDKPlus');
             shareApi.cancelAuthorize({
                 "platform": $sharesdk.PlatformID.SinaWeibo
             },function(ret, err){
@@ -113,7 +113,7 @@
 
         // 获取用户信息
         function userInfoBtnClickHandler() {
-            var shareApi = api.require('ShareSDKPlus');
+            var shareApi = api.require('shareSDKPlus');
             shareApi.getUserInfo({
                 "platform": $sharesdk.PlatformID.SinaWeibo
             },function(ret, err){
@@ -158,7 +158,7 @@
                     "type" : $sharesdk.ContentType.Auto
                 };
 
-            var shareApi = api.require('ShareSDKPlus');
+            var shareApi = api.require('shareSDKPlus');
             shareApi.shareContent({
                 "platform": $sharesdk.PlatformID.SinaWeibo,
                 "shareParams": shareParams
@@ -210,7 +210,7 @@
                     $sharesdk.PlatformID.WeChat
                 ];
 
-            var shareApi = api.require('ShareSDKPlus');
+            var shareApi = api.require('shareSDKPlus');
             shareApi.oneKeyShareContent({
                 "platforms": platforms, //为null时，显示全部可分享的平台（排除当前环境不可分享平台）
                 "shareParams": shareParams
@@ -256,7 +256,7 @@
                     "type" : $sharesdk.ContentType.WebPage,
                 };
 
-            var shareApi = api.require('ShareSDKPlus');
+            var shareApi = api.require('shareSDKPlus');
             shareApi.shareContent({
                 "platform": $sharesdk.PlatformID.SinaWeibo,
                 "shareParams": shareParams
